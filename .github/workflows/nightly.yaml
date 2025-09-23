@@ -1,0 +1,12 @@
+name: Nightly (scaffold)
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip
+        run: echo "Nightly pipeline scaffold"

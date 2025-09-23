@@ -1,0 +1,8 @@
+id: dp_min_cost
+metadata:
+  difficulty: medium
+inputs:
+  - name: costs
+    type: matrix<int>
+outputs:
+  type: int

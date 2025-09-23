@@ -1,0 +1,8 @@
+id: array_reverse
+metadata:
+  difficulty: easy
+inputs:
+  - name: arr
+    type: vector<int>
+outputs:
+  type: vector<int>

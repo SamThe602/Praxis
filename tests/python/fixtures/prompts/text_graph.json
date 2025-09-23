@@ -1,0 +1,6 @@
+{
+  "prompt_id": "text_graph",
+  "language": "en",
+  "user_text": "Find a path from node A to B.",
+  "examples": []
+}

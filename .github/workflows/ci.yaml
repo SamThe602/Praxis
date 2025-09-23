@@ -1,0 +1,13 @@
+name: CI (scaffold)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip
+        run: echo "CI pipeline scaffold" 

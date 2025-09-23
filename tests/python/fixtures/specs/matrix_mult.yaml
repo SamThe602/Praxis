@@ -1,0 +1,10 @@
+id: matrix_mult
+metadata:
+  difficulty: medium
+inputs:
+  - name: a
+    type: matrix<int>
+  - name: b
+    type: matrix<int>
+outputs:
+  type: matrix<int>

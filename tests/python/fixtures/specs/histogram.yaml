@@ -1,0 +1,8 @@
+id: histogram
+metadata:
+  difficulty: easy
+inputs:
+  - name: values
+    type: vector<int>
+outputs:
+  type: map<int,int>

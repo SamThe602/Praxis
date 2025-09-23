@@ -1,0 +1,20 @@
+concurrency:
+  default_mode: auto
+  default_kind: io
+  thread:
+    max_workers: 8
+    timeout: 30.0
+  process:
+    max_workers: null
+    timeout: 120.0
+sandbox:
+  timeout: 10.0
+  memory_limit_mb: null
+  env_allowlist:
+    - PATH
+    - PYTHONPATH
+    - PYTHONHASHSEED
+    - LANG
+    - LC_ALL
+    - LC_CTYPE
+    - HOME

@@ -1,0 +1,30 @@
+[workspace]
+members = [
+    "rust/vm_runtime",
+    "rust/verifier_native",
+    "rust/ffi"
+]
+resolver = "2"
+
+[package]
+name = "praxis-workspace"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dev-dependencies]
+praxis_vm_runtime = { path = "rust/vm_runtime" }
+praxis_verifier_native = { path = "rust/verifier_native" }
+praxis_ffi = { path = "rust/ffi" }
+
+[[test]]
+name = "vm_runtime_integration"
+path = "tests/rust/vm_runtime/integration.rs"
+
+[[test]]
+name = "verifier_native_static"
+path = "tests/rust/verifier_native/static.rs"
+
+[[test]]
+name = "verifier_native_properties"
+path = "tests/rust/verifier_native/properties.rs"

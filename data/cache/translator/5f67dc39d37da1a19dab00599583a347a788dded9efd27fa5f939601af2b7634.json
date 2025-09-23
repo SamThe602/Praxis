@@ -1,0 +1,44 @@
+{
+  "locale": "en",
+  "payload": {
+    "confidence": 0.75,
+    "metadata": {
+      "glossary_terms": [
+        "array_sort",
+        "array_reverse",
+        "graph_path",
+        "histogram",
+        "matrix_mult"
+      ],
+      "inference_mode": "rule_based"
+    },
+    "spec": {
+      "constraints": [],
+      "description": "Generic task inferred from natural prompt.",
+      "examples": [],
+      "id": "generic_task",
+      "inputs": [
+        {
+          "description": "User-provided input",
+          "name": "input",
+          "type": "struct"
+        }
+      ],
+      "latency_target_ms": 300,
+      "metadata": {
+        "difficulty": "unknown",
+        "locale": "en",
+        "tags": []
+      },
+      "natural_prompt": "Provide a generic discussion without a clear spec.",
+      "outputs": {
+        "description": "Expected output",
+        "type": "struct"
+      },
+      "proof_required": false
+    },
+    "yaml": "constraints:\n  []\ndescription: Generic task inferred from natural prompt.\nexamples:\n  []\nid: generic_task\ninputs:\n  -\n    description: User-provided input\n    name: input\n    type: struct\nlatency_target_ms: 300\nmetadata:\n  difficulty: unknown\n  locale: en\n  tags:\n    []\nnatural_prompt: Provide a generic discussion without a clear spec.\noutputs:\n  description: Expected output\n  type: struct\nproof_required: false\n"
+  },
+  "prompt": "Provide a generic discussion without a clear spec.",
+  "version": 1
+}

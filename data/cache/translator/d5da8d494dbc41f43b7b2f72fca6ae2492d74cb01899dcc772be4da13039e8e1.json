@@ -1,0 +1,66 @@
+{
+  "locale": "en",
+  "payload": {
+    "confidence": 0.95,
+    "metadata": {
+      "glossary_terms": [
+        "array_sort",
+        "array_reverse",
+        "graph_path",
+        "histogram",
+        "matrix_mult"
+      ],
+      "inference_mode": "rule_based"
+    },
+    "spec": {
+      "constraints": [
+        "result must be ascending"
+      ],
+      "description": "Sort a sequence into ascending order.",
+      "examples": [
+        {
+          "input": {
+            "arr": [
+              3,
+              1,
+              2
+            ]
+          },
+          "output": {
+            "result": [
+              1,
+              2,
+              3
+            ]
+          }
+        }
+      ],
+      "id": "array_sort",
+      "inputs": [
+        {
+          "description": "Input array",
+          "name": "arr",
+          "type": "vector<int>"
+        }
+      ],
+      "latency_target_ms": 100,
+      "metadata": {
+        "difficulty": "easy",
+        "locale": "en",
+        "tags": [
+          "arrays",
+          "sorting"
+        ]
+      },
+      "natural_prompt": "Sort the array ascending.",
+      "outputs": {
+        "description": "Sorted array",
+        "type": "vector<int>"
+      },
+      "proof_required": false
+    },
+    "yaml": "constraints:\n  - result must be ascending\ndescription: Sort a sequence into ascending order.\nexamples:\n  -\n    input:\n      arr:\n        - 3\n        - 1\n        - 2\n    output:\n      result:\n        - 1\n        - 2\n        - 3\nid: array_sort\ninputs:\n  -\n    description: Input array\n    name: arr\n    type: vector<int>\nlatency_target_ms: 100\nmetadata:\n  difficulty: easy\n  locale: en\n  tags:\n    - arrays\n    - sorting\nnatural_prompt: Sort the array ascending.\noutputs:\n  description: Sorted array\n  type: vector<int>\nproof_required: false\n"
+  },
+  "prompt": "Sort the array ascending.",
+  "version": 1
+}

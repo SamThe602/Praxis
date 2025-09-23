@@ -1,1 +1,19 @@
-# Regression evaluation profile placeholder.
+suite:
+  name: regression
+  description: "Mixed prompt/spec regression covering translator and structured flows"
+defaults:
+  export_formats: [json]
+  explain: true
+tasks:
+  - id: reverse_prompt
+    mode: prompt
+    prompt: "Reverse the array contents."
+  - id: histogram_prompt
+    mode: prompt
+    prompt: "Compute a histogram for a vector of integers."
+  - id: structured_dp
+    mode: spec
+    spec: tests/python/fixtures/specs/dp_min_cost.yaml
+  - id: structured_graph
+    mode: spec
+    spec: tests/python/fixtures/specs/graph_path.yaml

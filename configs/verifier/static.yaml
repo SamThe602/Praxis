@@ -1,1 +1,7 @@
-# Static analysis configuration placeholder.
+# Static analysis configuration with optional native bridge toggles.
+
+native_bridge:
+  enabled: false
+  static_analysis: true
+  metamorphic: true
+  checkers: true

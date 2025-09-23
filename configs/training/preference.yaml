@@ -1,1 +1,15 @@
-# Preference learning configuration placeholder.
+seed: 9876
+model:
+  input_dim: 32
+  hidden_dim: 64
+dataset:
+  num_samples: 32
+  input_dim: 32
+  seed: 9876
+training:
+  epochs: 2
+  batch_size: 8
+  learning_rate: 0.01
+  beta: 0.1
+  checkpoint_dir: data/processed/checkpoints/preference
+  log_interval: 1

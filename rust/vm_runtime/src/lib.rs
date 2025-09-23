@@ -1,10 +1,10 @@
 //! Praxis VM runtime scaffold.
 
+pub mod builtins;
 pub mod bytecode;
 pub mod compiler;
-pub mod ir;
 pub mod interpreter;
+pub mod ir;
 pub mod memory;
-pub mod trace;
-pub mod builtins;
 pub mod sandbox;
+pub mod trace;

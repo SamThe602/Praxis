@@ -1,1 +1,14 @@
-# LeetCode evaluation suite placeholder.
+suite:
+  name: leetcode_easy
+  description: "Deterministic structured specs mirroring LeetCode-style warmups"
+defaults:
+  mode: spec
+  export_formats: [json]
+  explain: true
+tasks:
+  - id: array_reverse_spec
+    spec: tests/python/fixtures/specs/array_reverse.yaml
+  - id: histogram_spec
+    spec: tests/python/fixtures/specs/histogram.yaml
+  - id: matrix_mult_spec
+    spec: tests/python/fixtures/specs/matrix_mult.yaml

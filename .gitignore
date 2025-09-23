@@ -1,0 +1,10 @@
+# Local virtual environments
+.poetry-env/
+.venv/
+
+# Bytecode caches
+__pycache__/
+target/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/

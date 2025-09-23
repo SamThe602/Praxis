@@ -1,1 +1,25 @@
-# Stress evaluation profile placeholder.
+suite:
+  name: stress
+  description: "Larger batch mixing prompt and structured tasks for smoke testing"
+defaults:
+  export_formats: [json]
+  explain: false
+tasks:
+  - id: stress_sort
+    mode: prompt
+    prompt: "Sort the input array ascending."
+  - id: stress_reverse
+    mode: prompt
+    prompt: "Reverse an array."
+  - id: stress_histogram
+    mode: prompt
+    prompt: "Generate an integer histogram."
+  - id: stress_matrix
+    mode: prompt
+    prompt: "Compute the product of two integer matrices."
+  - id: stress_structured_sort
+    mode: spec
+    spec: tests/python/fixtures/specs/array_reverse.yaml
+  - id: stress_structured_histogram
+    mode: spec
+    spec: tests/python/fixtures/specs/histogram.yaml

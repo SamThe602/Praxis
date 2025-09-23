@@ -1,3 +1,3 @@
-fn solve(graph: struct) -> vector<int> {
+fn solve(graph: struct) -> list<int> {
     return []; # placeholder
 }

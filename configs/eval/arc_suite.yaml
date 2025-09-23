@@ -1,1 +1,14 @@
-# ARC evaluation suite placeholder.
+suite:
+  name: arc_suite
+  description: "ARC-style prompt tasks hitting translator coverage"
+defaults:
+  mode: prompt
+  export_formats: [json]
+  explain: true
+tasks:
+  - id: arc_sort_prompt
+    prompt: "Sort the array in ascending order."
+  - id: arc_histogram_prompt
+    prompt: "Produce a histogram of the observed integers."
+  - id: arc_graph_path
+    prompt: "Return the path between two nodes in a directed graph."

@@ -1,0 +1,35 @@
+# Default configuration for the Praxis orchestrator CLI.
+synthesizer:
+  config_path: configs/synth/default.yaml
+  overrides: {}
+verifier:
+  enabled: true
+  entrypoint: solve
+  args: []
+  limits: {}
+output:
+  directory: data/cache/runs
+  save_json: true
+  save_yaml: false
+  save_markdown: false
+  include_trace: true
+translator:
+  locale: en
+  config: {}
+  accept_low_confidence: false
+explanation:
+  auto_generate: false
+  renderer: markdown
+telemetry:
+  snapshot: true
+sandbox:
+  timeout: 10.0
+  memory_limit_mb: null
+  env_allowlist:
+    - PATH
+    - PYTHONPATH
+    - PYTHONHASHSEED
+    - LANG
+    - LC_ALL
+    - LC_CTYPE
+    - HOME

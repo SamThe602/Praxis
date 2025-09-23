@@ -2,4 +2,4 @@
 
 pub mod checkers;
 pub mod metamorphic;
-pub mod static;
+pub mod r#static;

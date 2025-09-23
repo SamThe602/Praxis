@@ -3,13 +3,80 @@ name = "praxis"
 version = "0.1.0"
 description = "Praxis reasoning engine scaffold"
 authors = ["Praxis Team <dev@example.com>"]
+packages = [{ include = "packages" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 torch = "*"
+numpy = "*"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"
+pytest-cov = "*"
+black = "*"
+ruff = "*"
+isort = "*"
+mypy = "*"
+pre-commit = "*"
+types-pyyaml = "^6.0.12.20250915"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["packages"]
+
+[tool.ruff]
+line-length = 100
+src = ["packages", "tests/python"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_configs = true
+allow_redefinition = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = "packages.verifier.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "tests.python.test_verifier_diff_checker"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "tests.python.test_verifier_native_bridge"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "tests.python.test_verifier_properties"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "tests.python.test_verifier_runner"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "tests.python.test_verifier_static"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "scripts.*"
+ignore_errors = true
+
+[tool.pytest.ini_options]
+addopts = [
+  "--cov=packages",
+  "--cov-report=term-missing",
+  "--cov-fail-under=60",
+]
+testpaths = [
+  "tests/python",
+  "packages",
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
